@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+{% block body %}
+{% if session.logged_in %}
+<form action="{{ url_for('add_url') }}" method=post class=add-url>
+    <dl>
+        <dt>URL:
+        <dd><input type=text name=url min="1" width="100%"></input>
+        <dd><input type=submit value=Add>
+    </dl>
+</form>
+{% endif %}
+<ul class=entries>
+    {% if entries %}
+    <table class="flaskr">
+        <thead>
+            <tr><th>Long URL</th><th>Short URL</th></tr>
+        </thead>
+        <tbody>
+    {% endif %}
+    {% for entry in entries %}
+    <tr>
+        <td>{{ entry.url }}</td>
+        <td><a href={{ request.base_url }}o/{{ entry.tiny | safe }} />{{ entry.tiny | safe }}</td>
+    </tr>
+    {% else %}
+    <li><em>Unbelievable. No urls so far.</em>
+    {% endfor %}
+    {% if entries %}
+        </tbody>
+    </table>
+    {% endif %}
+</ul>
+{% endblock %}
