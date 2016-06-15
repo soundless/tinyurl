@@ -10,9 +10,7 @@ pip install -r ${CWD}/requirements.txt
 
 echo 
 echo "Using following command to activate the virtual env ..."
-echo "$ source ${CWD}/venv/bin/activate"
-echo "Start the main program with following command ..."
-echo "$ python ${CWD}/main.py
+echo "$ source ${CWD}/venv/bin/activate && python ${CWD}/main.py" 
 echo
 
 exit 0
