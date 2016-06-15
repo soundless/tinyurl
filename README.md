@@ -7,11 +7,9 @@ The short URL encoding is using following 51 characters
 23456789bcdfghjkmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ-_
 
 The implementation is using a bidirect function to encode/decode record row id in DB to a 6 characters string.
-<code>
 * 1      -> 000003
 * 125    -> 00004v
 * 28976  -> 000f9b
-</code>
 
 # Try it out
 
