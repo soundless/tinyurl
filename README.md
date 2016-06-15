@@ -3,11 +3,15 @@ Tiny URL implementation in flask
 
 This is an implementation for tinyurl in Python Flask using RESTful API.
 
-The short URL encoding is using following characters.
+The short URL encoding is using following 51 characters
 23456789bcdfghjkmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ-_
 
-It's an initial prototype just for now.
+The implementation is using a bidirect function to encode/decode record row id in DB to a 6 characters string.
+1      -> 000003
+125    -> 00004v
+28976  -> 000f9b
 
+# Try it out
 
-# To test it, execute the setup.sh on a *NIX machine and try with your browser to:
+Execute the setup.sh on a *NIX machine and try the following url in a browser.
 http://127.0.0.1:8080
